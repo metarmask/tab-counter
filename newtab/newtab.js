@@ -15,3 +15,7 @@ if(!sessionStorage.displayed){
 }
 
 sessionStorage.displayed = tabsOpened;
+
+const style = document.createElement("style");
+style.textContent = localStorage.style;
+document.head.appendChild(style);

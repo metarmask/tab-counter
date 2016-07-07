@@ -21,7 +21,3 @@ chrome.storage.onChanged.addListener((changes, area) => {
 		}
 	}
 });
-
-const style = document.createElement("style");
-style.textContent = localStorage.style;
-document.head.appendChild(style);
