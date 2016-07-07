@@ -4,11 +4,14 @@ const optionStyle = document.querySelector("#option-style");
 if(!localStorage.style){
 	optionStyle.value = "" +
 `body {
-	background: green;
+	background-color: white;
+	background-image: url("http://www.example.com/path/to/image.png");
 }
 
 #number {
 	font-size: 10rem;
+	color: white;
+	font-family: sans-serif;
 }`;
 }else{
 	optionStyle.value = localStorage.style;
