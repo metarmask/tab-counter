@@ -1,0 +1,20 @@
+<head>
+	<title>&#65279;</title>
+	<!--
+	If you change this script you must change the script hash in manifest.json
+	
+	The script will hopefully prevent a background flash
+	-->
+	<script>
+		const style = document.createElement("style");
+		style.textContent = localStorage.style;
+		document.documentElement.appendChild(style);
+	</script>
+	<link rel="stylesheet" href="newtab.css">
+	<link rel="stylesheet" href="odometer/odometer-theme-minimal.css">
+	<script src="odometer/odometer.min.js" defer></script>
+	<script src="newtab.js" defer></script>
+</head>
+<body>
+	<div id="number"></div>
+</body>

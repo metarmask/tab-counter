@@ -1,0 +1,21 @@
+{
+	"name": "New Tab",
+	"description": "Yay, animation!",
+	"version": "0.1",
+	"manifest_version": 2,
+	"chrome_url_overrides": {
+		"newtab": "newtab/newtab.html"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_security_policy": "script-src 'self' 'sha256-7NbPUHd86TEzw0eU4ji5SCqhtEU0VW3Hq8XYcJajxZ4='; object-src 'self'",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"options_ui": {
+		"page": "options/options.html",
+		"chrome_style": true
+	}
+}
