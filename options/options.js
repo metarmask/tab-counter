@@ -1,17 +1,8 @@
 /* global chrome */
 "use strict";
-const optionElements = {
-	style: document.querySelector("#option-style")
-};
-{
-	const optionsElementList = document.querySelectorAll(".option");
-	for(let i = 0;i < optionsElementList.length;i++){
-		optionElements[optionsElementList[i].id.substr(7)] = optionsElementList[i];
-	}
-}
-
+const optionStyle = document.querySelector("#option-style");
 if(!localStorage.style){
-	optionElements.style.value = "" +
+	optionStyle.value = "" +
 `body {
 	background: green;
 }
@@ -20,12 +11,11 @@ if(!localStorage.style){
 	font-size: 10rem;
 }`;
 }else{
-	optionElements.style.value = localStorage.style;
+	optionStyle.value = localStorage.style;
 }
 
 document.querySelector("#button-save").addEventListener("click", function(){
-	console.log("Save!");
 	chrome.storage.sync.set({
-		style: optionElements.style.value
+		style: optionStyle.value
 	}, () => close());
 });
