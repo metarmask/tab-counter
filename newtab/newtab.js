@@ -7,7 +7,7 @@ const number = new Odometer({
 	theme: "minimal",
 	format: "d",
 	duration: 1000,
-	value: (sessionStorage.displayed? parseInt(sessionStorage.displayed) : tabsOpened - 1)
+	value: (sessionStorage.displayed? parseInt(sessionStorage.displayed) : Math.max(0, tabsOpened - 1))
 });
 
 if(!sessionStorage.displayed){
