@@ -2,11 +2,11 @@
 "use strict";
 const defaultUserStyle = "" +
 `body {
-    
+
 }
 
 #number {
-    
+
 }`;
 
 const buttonSave = document.querySelector("#button-save");
