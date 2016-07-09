@@ -1,6 +1,12 @@
 <script src="options.js" defer></script>
 <link rel="stylesheet" href="options.css">
 
-<label for="option-style">Style</label>
-<textarea class="option" id="option-style" rows="8"></textarea>
-<button id="button-save">Save</button>
+<div class="option-group">
+	<label for="option-textColor">Text color</label>
+	<input class="option" id="option-textColor" type="color" value="#ffffff">
+</div>
+<div class="option-group" id="option-group-style">
+	<label for="option-style">Style</label>
+	<textarea class="option" id="option-style" rows="8"></textarea>
+</div>
+<button id="button-save" disabled>Save</button>

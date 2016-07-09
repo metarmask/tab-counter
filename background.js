@@ -14,10 +14,6 @@ chrome.tabs.onCreated.addListener(tab => {
 chrome.storage.onChanged.addListener((changes, area) => {
 	console.log(changes);
 	if(area === "sync"){
-		if("tabsOpened" in changes){
-			localStorage.tabsOpened = changes.tabsOpened.newValue;
-		}else if("style" in changes){
-			localStorage.style = changes.style.newValue;
-		}
+		Object.keys(changes).forEach(property => localStorage[property] = changes[property].newValue);
 	}
 });

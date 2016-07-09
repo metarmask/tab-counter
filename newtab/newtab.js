@@ -17,5 +17,5 @@ if(!sessionStorage.displayed){
 sessionStorage.displayed = tabsOpened;
 
 const style = document.createElement("style");
-style.textContent = localStorage.style;
+style.textContent = localStorage.option_style;
 document.head.appendChild(style);
