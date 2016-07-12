@@ -12,13 +12,15 @@
     margin-top: 5px;
 }
 
-.option-group {
-    margin-top: 10px;
+#option-group-style {
+    display: block;
 }
 
+
 .option-group {
-    display: flex;
-    align-items: center;
+    margin-top: 10px;
+	display: flex;
+	align-items: center;
 }
 
 .option-group label {
@@ -26,9 +28,5 @@
 }
 
 label[for=option-style] {
-    display: block;
-}
-
-#option-group-style {
     display: block;
 }
