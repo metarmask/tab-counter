@@ -7,7 +7,6 @@ const options = {};
 document.querySelectorAll(".option").forEach(optionElement => {
 	const optionObject = {};
 	const optionName = optionElement.id.substr("#option-".length - 1);
-	console.log(optionName);
 	options[optionName] = optionObject;
 	optionObject.element = optionElement;
 	optionObject.default = optionElement.value;
