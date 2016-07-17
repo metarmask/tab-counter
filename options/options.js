@@ -1,13 +1,13 @@
 /* global chrome */
 "use strict";
-const storage = new Proxy({}, {
+const storage = new Proxy(localStorage, {
 	get: (target, property) => {
 		if(localStorage.getItem(property) === null){
 			return;
 		}
 		let parseResult;
 		try {
-			parseResult = JSON.parse(localStorage.getItem(property));
+			parseResult = JSON.parse(target.getItem(property));
 		}catch(error){
 			if(!(error instanceof SyntaxError)){
 				throw error;
@@ -18,7 +18,7 @@ const storage = new Proxy({}, {
 	},
 	set: (target, property, value) => {
 		console.log(property, JSON.stringify(value));
-		localStorage.setItem(property, JSON.stringify(value));
+		target.setItem(property, JSON.stringify(value));
 		return true;
 	}
 });
