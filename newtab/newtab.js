@@ -16,6 +16,17 @@ if(!sessionStorage.displayed){
 
 sessionStorage.displayed = tabsOpened;
 
-const style = document.createElement("style");
-style.textContent = localStorage.option_style;
-document.head.appendChild(style);
+const friendlyStyle = document.createElement("style");
+friendlyStyle.textContent = `
+body {
+	color: ${localStorage.option_textColor};
+	background-color: ${localStorage.option_backgroundColor};
+	background-image: url("${localStorage.backgroundImageURL}");
+	background-repeat: ${localStorage.option_backgroundRepeat === "true"? "repeat" : "no-repeat"};
+	background-size: ${localStorage.option_backgroundSize};
+}`;
+document.head.appendChild(friendlyStyle);
+
+const customStyle = document.createElement("style");
+customStyle.textContent = localStorage.option_style;
+document.head.appendChild(customStyle);

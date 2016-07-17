@@ -4,7 +4,7 @@
     margin: 10px 0 0 auto;
 }
 
-#option-style {
+#option_style {
     display: block;
     width: 100%;
     overflow: scroll;
@@ -26,6 +26,6 @@
     flex-grow: 1;
 }
 
-label[for=option-style] {
+label[for=option_style] {
     display: block;
 }
