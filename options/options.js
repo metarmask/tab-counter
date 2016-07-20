@@ -57,7 +57,7 @@ class Option {
 			return this.element.checked = value;
 		}else if(this.type === "file"){
 			return this._value = value;
-		}else if(this.type === "number"){
+		}else{
 			return this.element.value = value;
 		}
 	}
