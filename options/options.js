@@ -45,6 +45,8 @@ class Option {
 			}else{
 				return this._value;
 			}
+		}else if(this.type === "number"){
+			return parseInt(this.element.value);
 		}else{
 			return this.element.value;
 		}
@@ -55,7 +57,7 @@ class Option {
 			return this.element.checked = value;
 		}else if(this.type === "file"){
 			return this._value = value;
-		}else{
+		}else if(this.type === "number"){
 			return this.element.value = value;
 		}
 	}

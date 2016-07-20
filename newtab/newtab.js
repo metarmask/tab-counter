@@ -19,6 +19,7 @@ sessionStorage.displayed = tabsOpened;
 const friendlyStyle = document.createElement("style");
 friendlyStyle.textContent = `
 body {
+	font-size: ${storage.option_textSize}px;
 	color: ${storage.option_textColor};
 	background-color: ${storage.option_backgroundColor};
 	background-image: url("${storage.backgroundImageURL}");

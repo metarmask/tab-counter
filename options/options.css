@@ -1,3 +1,4 @@
+/* Saving */
 #save-button {
     display: block;
     width: 40px;
@@ -7,15 +8,7 @@
 .save-status-important {
 	color: red;
 }
-
-textarea {
-    display: block;
-    width: 100%;
-    overflow: scroll;
-    resize: none;
-    margin-top: 5px;
-}
-
+             /* Option groups */
 #save-group, .option-group {
     margin-top: 10px;
 	display: flex;
@@ -26,6 +19,7 @@ textarea {
     flex-grow: 1;
 }
 
+/* Style textarea */
 label[for=option_style] {
     display: block;
 }
@@ -34,10 +28,23 @@ label[for=option_style] {
     display: block;
 }
 
-#option_backgroundImage {
+/* Input elements customizations */
+input[type="file"] {
     font-size: 0;
 }
 
-#option_backgroundImage::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
     font-size: 13.3333px;
+}
+
+input[type="number"] {
+    width: 44px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    overflow: scroll;
+    resize: none;
+    margin-top: 5px;
 }
