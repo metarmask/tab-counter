@@ -1,10 +1,14 @@
-#button-save {
+#save-button {
     display: block;
     width: 40px;
     margin: 10px 0 0 auto;
 }
 
-#option_style {
+.save-status-important {
+	color: red;
+}
+
+textarea {
     display: block;
     width: 100%;
     overflow: scroll;
@@ -12,11 +16,7 @@
     margin-top: 5px;
 }
 
-#option-group-style {
-    display: block;
-}
-
-.option-group {
+#save-group, .option-group {
     margin-top: 10px;
 	display: flex;
 	align-items: center;
@@ -28,4 +28,16 @@
 
 label[for=option_style] {
     display: block;
+}
+
+#option-group-style {
+    display: block;
+}
+
+#option_backgroundImage {
+    font-size: 0;
+}
+
+#option_backgroundImage::-webkit-file-upload-button {
+    font-size: 13.3333px;
 }

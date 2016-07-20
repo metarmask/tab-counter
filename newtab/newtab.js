@@ -1,7 +1,7 @@
-/* global Odometer */
+/* global Odometer, storage */
 "use strict";
 const odometerOptions = {auto: false};
-const tabsOpened = parseInt(localStorage.tabsOpened);
+const tabsOpened = storage.tabsOpened;
 const number = new Odometer({
 	el: document.querySelector("#number"),
 	theme: "minimal",
@@ -19,14 +19,14 @@ sessionStorage.displayed = tabsOpened;
 const friendlyStyle = document.createElement("style");
 friendlyStyle.textContent = `
 body {
-	color: ${localStorage.option_textColor};
-	background-color: ${localStorage.option_backgroundColor};
-	background-image: url("${localStorage.backgroundImageURL}");
-	background-repeat: ${localStorage.option_backgroundRepeat === "true"? "repeat" : "no-repeat"};
-	background-size: ${localStorage.option_backgroundSize};
+	color: ${storage.option_textColor};
+	background-color: ${storage.option_backgroundColor};
+	background-image: url("${storage.backgroundImageURL}");
+	background-repeat: ${storage.option_backgroundRepeat? "repeat" : "no-repeat"};
+	background-size: ${storage.option_backgroundSize};
 }`;
 document.head.appendChild(friendlyStyle);
 
 const customStyle = document.createElement("style");
-customStyle.textContent = localStorage.option_style;
+customStyle.textContent = storage.option_style;
 document.head.appendChild(customStyle);

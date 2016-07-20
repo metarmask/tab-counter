@@ -1,0 +1,8 @@
+body {
+    background: linear-gradient(blue, cyan);
+}
+
+#number {
+    color: #ffcc3b;
+    text-shadow: 0 0 10px #582d00;
+}
