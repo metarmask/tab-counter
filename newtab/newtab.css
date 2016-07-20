@@ -4,6 +4,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-position: center;
 	font-size: 10em;
 	overflow: hidden;
 }

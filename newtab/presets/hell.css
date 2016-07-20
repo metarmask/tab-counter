@@ -1,0 +1,8 @@
+body {
+    background: radial-gradient(red, darkred);
+}
+
+#number {
+    color: #6b0000;
+    text-shadow: 0 0 15px #460000;
+}

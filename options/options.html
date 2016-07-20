@@ -1,18 +1,64 @@
-<script src="options.js" defer></script>
-<link rel="stylesheet" href="options.css">
-
-<div class="option-group">
-	<label for="option-textColor">Text color</label>
-	<input class="option" id="option-textColor" type="color" value="#ffffff">
-</div>
-<div class="option-group" id="option-group-style">
-	<label for="option-style">Style</label>
-	<textarea class="option" id="option-style" rows="8">body {
-
+<head>
+	<script src="../util/storage.js" defer></script>
+	<script src="options.js" defer></script>
+	<link rel="stylesheet" href="options.css">
+</head>
+<body>
+	<div class="option-group">
+		<label for="option_font">Font</label>
+		<input class="option" id="option_font" type="text" value="">
+	</div>
+	<div class="option-group">
+		<label for="option_textSize">Text size</label>
+		<input class="option" id="option_textSize" type="number" value="160">
+	</div>
+	<div class="option-group">
+		<label for="option_textColor">Text color</label>
+		<input class="option" id="option_textColor" type="color" value="#000000">
+	</div>
+	<div class="option-group">
+		<label for="option_backgroundColor">Background color</label>
+		<input class="option" id="option_backgroundColor" type="color" value="#ffffff">
+	</div>
+	<div class="option-group">
+		<label for="option_backgroundImage">Background image</label>
+		<button class="option-none" id="option_backgroundImageNone">None</button>
+		<input class="option" id="option_backgroundImage" type="file" accept="image/*">
+	</div>
+	<div class="option-group">
+		<label for="option_backgroundSize">Background size</label>
+		<select class="option" id="option_backgroundSize" value="contain">
+			<option value="auto">Scale</option>
+			<option value="contain" selected>Contain</option>
+			<option value="cover">Cover</option>
+		</select>
+	</div>
+	<div class="option-group">
+		<label for="option_backgroundRepeat">Background repeat</label>
+		<input class="option" id="option_backgroundRepeat" type="checkbox" checked>
+	</div>
+	<div class="option-group" id="option-group-style">
+		<label for="option_style">Style (overrides above)</label>
+		<textarea class="option" id="option_style" rows="8">body {
+    
 }
 
 #number {
-
+    
 }</textarea>
-</div>
-<button id="button-save" disabled>Save</button>
+	</div>
+	<div class="option-group">
+		<label for="option_preset">Load preset (deletes style)</label>
+		<select class="option" id="option_preset" value="sea.css">
+			<option value="none" hidden></option>
+			<option value="empty.css">Empty</option>
+			<option value="sea.css">Sea</option>
+			<option value="hell.css">Hell</option>
+			<option value="terminal.css">Terminal</option>
+		</select>
+	</div>
+	<div id="save-group">
+		<span id="save-status"></span>
+		<button id="save-button" disabled>Save</button>
+	</div>
+</body>

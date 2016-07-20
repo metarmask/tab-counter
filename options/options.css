@@ -1,22 +1,15 @@
-#button-save {
+/* Saving */
+#save-button {
 	display: block;
 	width: 40px;
 	margin: 10px 0 0 auto;
 }
 
-#option-style {
-	display: block;
-	width: 100%;
-	overflow: scroll;
-	resize: none;
-	margin-top: 5px;
+.save-status-important {
+	color: red;
 }
-
-#option-group-style {
-	display: block;
-}
-
-.option-group {
+             /* Option groups */
+#save-group, .option-group {
 	margin-top: 10px;
 	display: flex;
 	align-items: center;
@@ -26,6 +19,32 @@
 	flex-grow: 1;
 }
 
-label[for=option-style] {
+/* Style textarea */
+label[for=option_style] {
 	display: block;
+}
+
+#option-group-style {
+	display: block;
+}
+
+/* Input elements customizations */
+input[type="file"] {
+	font-size: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	font-size: 13.3333px;
+}
+
+input[type="number"] {
+	width: 44px;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	overflow: scroll;
+	resize: none;
+	margin-top: 5px;
 }
