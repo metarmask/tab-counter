@@ -1,0 +1,3 @@
+Replaces the new tab page with a counter showing the amount of tabs you've opened. The count is synced to your account and will follow you anywhere.
+
+Change the font, size and color of the number, replace the background with a beautiful picture of a mountain or a gradient - how your new tab looks is up to you.
